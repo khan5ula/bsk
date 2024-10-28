@@ -6,6 +6,8 @@ from frame import Frame
 
 
 class TestBowlingGame(unittest.TestCase):
-
-    def test_something(self):
-        pass
+    def test_game_created(self):
+        f = Frame(1, 5)
+        game = BowlingGame()
+        game.add_frame(f)
+        self.assertEqual(f, game.get_frame_at(0))
